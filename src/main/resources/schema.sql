@@ -11,3 +11,5 @@ CREATE TABLE IF NOT EXISTS notes (
     content VARCHAR(500) NOT NULL,
     owner_username VARCHAR(50) NOT NULL
 );
+
+CREATE INDEX IF NOT EXISTS idx_notes_owner_username ON notes(owner_username);
